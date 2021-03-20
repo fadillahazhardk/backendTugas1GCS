@@ -8,10 +8,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  username: {
-    type: String,
-    required: true,
-  },
   email: {
     type: String,
     unique: true,
@@ -36,6 +32,12 @@ const userSchema = new mongoose.Schema({
       message: "Password are not the same",
     },
   },
+  address: {
+    type: String
+  },
+  numberPhone : {
+    type: String
+  }
 });
 
 //Encrypt Password

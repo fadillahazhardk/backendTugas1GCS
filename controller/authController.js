@@ -7,6 +7,8 @@ exports.signup = async (req, res, next) => {
     email: req.body.email,
     password: req.body.password,
     passwordConfirm: req.body.passwordConfirm,
+    numberPhone: req.body.numberPhone,
+    address: req.body.address
   });
 
   res.status(201).json({
@@ -34,7 +36,9 @@ exports.login = async (req, res, next) => {
   res.status(200).json({
     status: "success",
     data: {
-      user,
+      _id: user._id,
+      name: user.name,
+      email: user.email
     },
   });
 };
